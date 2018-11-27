@@ -28,7 +28,7 @@ var palermoLng = 13.2872482;
 var options = {
   lat:romaLat,
   lng: romaLng,
-  zoom: 0,
+  zoom: 8,
   style: "http://{s}.tile.osm.org/{z}/{x}/{y}.png"
 }
 
@@ -76,46 +76,43 @@ push();
     textSize(22);
     textStyle(NORMAL);
 
-     ellipse(point1.x, point1.y, 50);
+     ellipse(point1.x, point1.y, 20);
      text('Bologna',point1.x+10, point1.y);
      //image(punto,point1.x-30, point1.y,30,30);
 
 
-     ellipse(point2.x, point2.y, 50);
+     ellipse(point2.x, point2.y, 20);
     text('Roma',point2.x+10, point2.y);
      //image(punto,point2.x-30, point2.y,30,30);
 
 
-     ellipse(point3.x, point3.y, 50);
+     ellipse(point3.x, point3.y, 20);
      text('Firenze',point3.x+10, point3.y);
      //image(punto,point3.x-30, point3.y,30,30);
 
 
-     ellipse(point4.x, point4.y, 50);
+     ellipse(point4.x, point4.y, 20);
      text('Napoli',point4.x+10, point4.y);
      //image(punto,point4.x-30, point4.y,30,30);
 
 
-     ellipse(point5.x, point5.y, 50);
+     ellipse(point5.x, point5.y, 20);
      text('Cagliari',point5.x+10, point5.y);
      //image(punto,point5.x-30, point5.y,30,30);
 
 
-     ellipse(point6.x, point6.y, 50);
+     ellipse(point6.x, point6.y, 20);
     text('Palermo',point6.x+10, point6.y);
      //image(punto,point6.x-35, point6.y,30,30);
 
 
-     ellipse(point0.x, point0.y, 50);
+     ellipse(point0.x, point0.y, 20);
     text('you are here',point0.x+10, point0.y);
      //image(punto,point0.x-30, point0.y,punto.width/2,punto.Height/2);
  pop()
 
 push()
  if(mouseIsPressed === true){
-   textSize(15);
-   textStyle(BOLD);
-   fill('black');
    stroke('black');
    strokeWeight(3);
    var d1 = dist(mouseX, mouseY, point1.x, point1.y);
@@ -125,24 +122,48 @@ push()
    var d5 = dist(mouseX, mouseY, point5.x, point5.y);
    var d6 = dist(mouseX, mouseY, point6.x, point6.y);
 
+
       if (d1 < 50/2){
     line(point0.x, point0.y, point1.x, point1.y);
-
+          textSize(15);
+          textStyle(BOLD);
+          fill('black');
+          noStroke();
     text(distance1 +'km',point1.x+10, point1.y+22);
   } else if (d2 < 50/2){
      line(point0.x, point0.y, point2.x, point2.y);
+         textSize(15);
+         textStyle(BOLD);
+         fill('black');
+         noStroke();
      text(distance2 +'km',point2.x+10, point2.y+22);
    } else if (d3 < 50/2){
       line(point0.x, point0.y, point3.x, point3.y);
+          textSize(15);
+          textStyle(BOLD);
+          fill('black');
+          noStroke();
       text(distance3 +'km',point3.x+10, point3.y+22);
     } else if (d4 < 50/2){
        line(point0.x, point0.y, point4.x, point4.y);
+         textSize(15);
+         textStyle(BOLD);
+         fill('black');
+         noStroke();
        text(distance4 +'km',point4.x+10, point4.y+22);
      } else if (d5 < 50/2){
         line(point0.x, point0.y, point5.x, point5.y);
+          textSize(15);
+          textStyle(BOLD);
+          fill('black');
+          noStroke();
         text(distance5 +'km',point5.x+10, point5.y+22);
       } else if (d6 < 50/2){
          line(point0.x, point0.y, point6.x, point6.y);
+           textSize(15);
+           textStyle(BOLD);
+           fill('black');
+           noStroke();
          text(distance6 +'km',point6.x+10, point6.y+22);
        }
 
