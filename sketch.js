@@ -73,7 +73,7 @@ var distance6 = calcGeoDistance(myLoc.latitude, myLoc.longitude, palermoLat, pal
 push();
     fill('red');
     noStroke();
-    textSize(90);
+    textSize(30);
     textStyle(NORMAL);
 
      ellipse(point1.x, point1.y, 50);
@@ -113,7 +113,7 @@ push();
 
 push()
  if(mouseIsPressed === true){
-   textSize(50);
+   textSize(20);
    textStyle(BOLD);
    fill('black');
    stroke('black');
@@ -149,13 +149,13 @@ push()
   }
 pop()
 push()
-textSize(90);
+textSize(30);
 textStyle(BOLD);
 fill('black');
 text('How far you are from these cities', width/8,height/6)
 pop()
 push()
-textSize(50);
+textSize(20);
 textStyle(NORMAL);
 fill('black');
 text('press the mouse on the city to find out', width/8,height/5)
