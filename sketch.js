@@ -28,7 +28,7 @@ var palermoLng = 13.2872482;
 var options = {
   lat:romaLat,
   lng: romaLng,
-  zoom: 5,
+  zoom: 0,
   style: "http://{s}.tile.osm.org/{z}/{x}/{y}.png"
 }
 
