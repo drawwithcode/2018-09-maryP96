@@ -28,7 +28,7 @@ var palermoLng = 13.2872482;
 var options = {
   lat:romaLat,
   lng: romaLng,
-  zoom: 8,
+  zoom: 5,
   style: "http://{s}.tile.osm.org/{z}/{x}/{y}.png"
 }
 
@@ -73,7 +73,7 @@ var distance6 = calcGeoDistance(myLoc.latitude, myLoc.longitude, palermoLat, pal
 push();
     fill('red');
     noStroke();
-    textSize(30);
+    textSize(22);
     textStyle(NORMAL);
 
      ellipse(point1.x, point1.y, 50);
@@ -113,7 +113,7 @@ push();
 
 push()
  if(mouseIsPressed === true){
-   textSize(20);
+   textSize(15);
    textStyle(BOLD);
    fill('black');
    stroke('black');
@@ -128,34 +128,34 @@ push()
       if (d1 < 50/2){
     line(point0.x, point0.y, point1.x, point1.y);
 
-    text(distance1 +'km',point1.x+10, point1.y+50);
+    text(distance1 +'km',point1.x+10, point1.y+22);
   } else if (d2 < 50/2){
      line(point0.x, point0.y, point2.x, point2.y);
-     text(distance2 +'km',point2.x+10, point2.y+50);
+     text(distance2 +'km',point2.x+10, point2.y+22);
    } else if (d3 < 50/2){
       line(point0.x, point0.y, point3.x, point3.y);
-      text(distance3 +'km',point3.x+10, point3.y+50);
+      text(distance3 +'km',point3.x+10, point3.y+22);
     } else if (d4 < 50/2){
        line(point0.x, point0.y, point4.x, point4.y);
-       text(distance4 +'km',point4.x+10, point4.y+50);
+       text(distance4 +'km',point4.x+10, point4.y+22);
      } else if (d5 < 50/2){
         line(point0.x, point0.y, point5.x, point5.y);
-        text(distance5 +'km',point5.x+10, point5.y+50);
+        text(distance5 +'km',point5.x+10, point5.y+22);
       } else if (d6 < 50/2){
          line(point0.x, point0.y, point6.x, point6.y);
-         text(distance6 +'km',point6.x+10, point6.y+50);
+         text(distance6 +'km',point6.x+10, point6.y+22);
        }
 
   }
 pop()
 push()
-textSize(30);
+textSize(22);
 textStyle(BOLD);
 fill('black');
 text('How far you are from these cities', width/8,height/6)
 pop()
 push()
-textSize(20);
+textSize(15);
 textStyle(NORMAL);
 fill('black');
 text('press the mouse on the city to find out', width/8,height/5)
